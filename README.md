@@ -80,14 +80,64 @@ python3 rsa.py
 
 Writed by : Cloclodudu and Asch-sys
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-XOR Is Friend Not Food
+Symbolic Decimals
 
-"Here: \t\x1b\x11\x00\x16\x0b\x1d\x19\x17\x0b\x05\x1d(\x05\x005\x1b\x1f\t,\r\x00\x18\x1c\x0e
+"Did you know that you can hide messages with symbols? For example, !@#$%^&*( is 123456789!<br /> Now Try: ^&,*$,&),!@#,*#,!!^,(&,!!$,(%,$^,(%,*&,(&,!!$,!!%,(%,$^,(%,&),!!!,!!$,(%,$^,(%,&^,!)%,!)@,!)!,!@% However, this isn't as easy as you might think."
 
-I think the flag started with: ctflearn{"
+- !@#$%^&*( is 123456789, so :
 
--
+!=1
+@=2
+#=3
+$=4
+%=5
+^=6
+&=7
+*=8
+
+we can use it to convert : ^&,*$,&),!@#,*#,!!^,(&,!!$,(%,$^,(%,*&,(&,!!$,!!%,(%,$^,(%,&),!!!,!!$,(%,$^,(%,&^,!)%,!)@,!)!,!@% 
+
+-We can create our sd.py :
+
+s="^&,*$,&),!@#,*#,!!^,(&,!!$,(%,$^,(%,*&,(&,!!$,!!%,(%,$^,(%,&),!!!,!!$,(%,$^,(%,&^,!)%,!)@,!)!,!@%"
+s1=""
+l=len(s)
+c=0
+l=l-1
+while c<=l:
+      ch=s[c]
+      if ch=='!':
+         s1=s1 +'1'
+      elif ch =='@':
+         s1=s1+'2'
+      elif ch =='#':
+         s1=s1+'3'
+      elif ch =='$':
+         s1=s1+'4'
+      elif ch =='%':
+         s1=s1+'5'
+      elif ch =='^':
+         s1=s1+'6'
+      elif ch =='&':
+         s1=s1+'7'
+      elif ch =='*':
+         s1=s1+'8'
+      elif ch =='(':
+         s1=s1+'9'
+      elif ch ==')':
+         s1=s1+'0'
+      else:
+          s1=s1+' ' -> for the ','
+      c=c+1
+print(s1)
+
+-Result :
+67 84 70 123 83 116 97 114 95 46 95 87 97 114 115 95 46 95 70 111 114 95 46 95 76 105 102 101 125
+
+-CyberChef - From decimal
+
+CTF{Star_._Wars_._For_._Life}
 
 Writed by : Cloclodudu and Asch-sys
