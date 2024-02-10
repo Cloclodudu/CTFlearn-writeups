@@ -3,6 +3,7 @@ CTFlearn-writeups
 
  
 Encryption Master
+
 "Alright. Serious talk. You need to work pretty hard for this one (unless you are an encryption god.) Well, good luck. https://mega.nz/#!iPgzXIiD!Pkza_S8YUxIXrZ7gdwMcIoufMzi_FjSio3Vx9GuL0ok"
 
 CyberChef
@@ -23,6 +24,25 @@ CTF{I_AM_PROUD_OF_YOU}
 
 Writed by : Cloclodudu and Asch-sys
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+So many 64s
+
+"Help! My friend stole my flashdrive that had the flag on it. When he gave it back the flag was changed! Can you help me decrypt it? https://mega.nz/#!OHhUyIqA!H9WxSdG1O7eVcCm0dffggNB0-dBemSpBAXiZ0OXJnLk"
+
+CyberChef
+
+Use From Base 64 until you have some plain text : " ABCTF{pr3tty_b4s1c_r1ght?} ".
+Now you can detect the flag : CTF{pr3tty_b4s1c_r1ght?}
+
+Writed by : Cloclodudu and Asch-sys
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RSA Twins!
+
+"https://mega.nz/#!2aBwFCKa!NWQKRIbYzSAU2iwCPNppO7SE92W6sne4FKD3sKE2A-k Aww, twins :). Theyâre so cute! They must be (almost) identical because theyâre the same except for the slightest difference. Anyway, see if you can find my flag. Hint: This is just math. You're probably not going to find any sort of specialized attack."
 
 
 
+Writed by : Cloclodudu and Asch-sys
