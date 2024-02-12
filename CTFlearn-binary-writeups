@@ -1,1 +1,19 @@
+Blackbox
+
+"What is 1 + 1? Run the command: ssh blackbox@104.131.79.111 -p 1001 (pw: guest)."
+
+-ssh blackbox@104.131.79.111 -p 1001 
+
+-ls 
+-->blackbox  flag.txt
+
+-cat flag.txt
+-->cat: flag.txt: Permission denied
+
+-./blackbox
+-->What is 1 + 1 = 2
+   No dummy... 1 + 1 != 0...
+-
+
+Writed by Cloclodudu and Asch-sys
 
