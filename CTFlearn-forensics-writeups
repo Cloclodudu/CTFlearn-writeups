@@ -2,11 +2,22 @@ Corrupted File
 
 "Help! I can't open this file. Something to do with the file header… Whatever that is. https://mega.nz/#!aKwGFARR!rS60DdUh8-jHMac572TSsdsANClqEsl9PD2sGl-SyDk"Writu
 
--Imagemagick
-convert -coalesce unooenable.gif 
+-exiftool unopenable.gif
+We can see that there is a file format error
+Let see if there is something wrong with the header of the file.
+
+-hexeditor unopenable.gif
+We can see that the header of the file is not correct. The GIF Signature Format is supposes to start by:
+47 49 46 38 39 61
+Modify it and save it with ctrl+x
+
+-Imagemagick to convert the gif into multible images. It will be easier to see the flag.
+convert -coalesce unopenable.gif 
+-->ZmxhZ3tnMWZfb3JfajFmfQ==
+
 -CyberChef - From Base64
 flag{g1f_or_j1f}
-![alt text](Screenshot 2024-02-11 140623.png)
+
 Writed by Asch-sys and Cloclodudu
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
